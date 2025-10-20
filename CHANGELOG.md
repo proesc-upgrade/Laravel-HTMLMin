@@ -2,6 +2,13 @@ CHANGE LOG
 ==========
 
 
+## V5.0.1 (20/10/2025)
+
+* Added Laravel 5.0 support
+* Added backward compatibility for Laravel 5.0 methods (runningInConsole, getCustomDirectives)
+* Updated minimum PHP version to 5.4.0 for Laravel 5.0 compatibility
+
+
 ## V5.0 (25/08/2017)
 
 * Added laravel 5.5 support

@@ -12,7 +12,7 @@ Laravel HTMLMin is currently maintained by [Raza Mehdi](https://github.com/srmkl
 
 ## Installation
 
-Laravel HTMLMin requires [PHP](https://php.net) 5.5+. This particular version supports Laravel 5.1-5.8, 6.x, 7.x and 8.x.
+Laravel HTMLMin requires [PHP](https://php.net) 5.4+. This particular version supports Laravel 5.0-5.8, 6.x, 7.x, 8.x, 9.x and 10.x.
 
 To get the latest version, simply require the project using [Composer](https://getcomposer.org):
 
@@ -20,7 +20,7 @@ To get the latest version, simply require the project using [Composer](https://g
 $ composer require htmlmin/htmlmin
 ```
 
-Once installed, register the service provider in your `config/app.php`
+Once installed, if you're using **Laravel 5.1+**, the package will auto-register via package discovery. For **Laravel 5.0**, you need to register the service provider manually in your `config/app.php`:
 
 ```php
 'providers' => [
@@ -35,6 +35,17 @@ If you want, a facade is available to alias
     'HTMLMin' => HTMLMin\HTMLMin\Facades\HTMLMin::class
 ]
 ```
+
+### Migrating from Laravel 4.2
+
+If you're migrating from Laravel 4.2, follow these steps:
+
+1. Update your `composer.json` to require Laravel 5.0+
+2. Update this package to the latest version: `composer require htmlmin/htmlmin`
+3. Move your config file from `app/config/packages/htmlmin/htmlmin/config.php` to `config/htmlmin.php`
+4. If you were using filters, replace them with the new middleware `HTMLMin\HTMLMin\Http\Middleware\MinifyMiddleware`
+5. Update your service provider registration to use the new namespace format shown above
+6. Clear your compiled views: `php artisan view:clear`
 
 ## Configuration
 
