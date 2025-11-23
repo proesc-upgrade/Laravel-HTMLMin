@@ -2,6 +2,15 @@ CHANGE LOG
 ==========
 
 
+## V6.0.0 (TBD)
+
+* Updated package to focus on Laravel 6+ support
+* Updated minimum PHP version to 7.2.0 (required for Laravel 6+)
+* Removed support for Laravel 5.0-5.6 (maintained support for 5.7 and 5.8)
+* Added support for Laravel 11.x
+* Updated documentation and test stubs to reflect Laravel 6+ focus
+
+
 ## V5.0.1 (20/10/2025)
 
 * Added Laravel 5.0 support
