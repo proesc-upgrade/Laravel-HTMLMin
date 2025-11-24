@@ -2,6 +2,16 @@ CHANGE LOG
 ==========
 
 
+## V7.0.0 (TBD)
+
+* Updated package to focus on Laravel 7+ support
+* Updated minimum PHP version to 7.2.5 (required for Laravel 7+)
+* Removed support for Laravel 5.7, 5.8 and 6.x
+* Now supports Laravel 7.x, 8.x, 9.x, 10.x and 11.x
+* Updated documentation to reflect Laravel 7+ focus
+* Simplified installation instructions (package discovery always available in Laravel 7+)
+
+
 ## V6.0.0 (TBD)
 
 * Updated package to focus on Laravel 6+ support
