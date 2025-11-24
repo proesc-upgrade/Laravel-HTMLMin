@@ -12,7 +12,7 @@ Laravel HTMLMin is currently maintained by [Raza Mehdi](https://github.com/srmkl
 
 ## Installation
 
-Laravel HTMLMin requires [PHP](https://php.net) 7.2.5+. This particular version supports Laravel 7.x, 8.x, 9.x, 10.x and 11.x.
+Laravel HTMLMin requires [PHP](https://php.net) 7.3.0+. This particular version supports Laravel 8.x, 9.x, 10.x and 11.x.
 
 To get the latest version, simply require the project using [Composer](https://getcomposer.org):
 
@@ -40,7 +40,7 @@ If you want, a facade is available to alias
 
 If you're migrating from an older version of this package or Laravel, follow these steps:
 
-1. Update your `composer.json` to require Laravel 7.0+
+1. Update your `composer.json` to require Laravel 8.0+
 2. Update this package to the latest version: `composer require htmlmin/htmlmin`
 3. Ensure your config file is at `config/htmlmin.php` (publish it if needed: `php artisan vendor:publish`)
 4. If you were using filters (Laravel 4.2), replace them with the new middleware `HTMLMin\HTMLMin\Http\Middleware\MinifyMiddleware`

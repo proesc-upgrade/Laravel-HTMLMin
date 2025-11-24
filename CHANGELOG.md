@@ -2,6 +2,15 @@ CHANGE LOG
 ==========
 
 
+## V8.0.0 (TBD)
+
+* Updated package to focus on Laravel 8+ support
+* Updated minimum PHP version to 7.3.0 (required for Laravel 8+)
+* Removed support for Laravel 7.x
+* Now supports Laravel 8.x, 9.x, 10.x and 11.x
+* Updated documentation to reflect Laravel 8+ focus
+
+
 ## V7.0.0 (TBD)
 
 * Updated package to focus on Laravel 7+ support
