@@ -59,12 +59,7 @@ class HTMLMinServiceProvider extends ServiceProvider
         $source = realpath(__DIR__.'/../config/htmlmin.php');
 
         if ($this->app instanceof LaravelApplication) {
-            // Laravel 5.0 compatibility: runningInConsole() doesn't exist yet
-            $runningInConsole = method_exists($this->app, 'runningInConsole') 
-                ? $this->app->runningInConsole() 
-                : php_sapi_name() == 'cli';
-                
-            if ($runningInConsole) {
+            if ($this->app->runningInConsole()) {
                 $this->publishes([$source => config_path('htmlmin.php')]);
             }
         } elseif ($this->app instanceof LumenApplication) {
@@ -191,9 +186,8 @@ class HTMLMinServiceProvider extends ServiceProvider
             $storagePath = $app->config->get('view.compiled');
             $ignoredPaths = $app->config->get('htmlmin.ignore', []);
 
-            // Laravel 5.0 compatibility: getCustomDirectives() may not exist
             $customDirectives = [];
-            if ($this->previousCompiler && method_exists($this->previousCompiler, 'getCustomDirectives')) {
+            if ($this->previousCompiler) {
                 $customDirectives = $this->previousCompiler->getCustomDirectives();
             }
 

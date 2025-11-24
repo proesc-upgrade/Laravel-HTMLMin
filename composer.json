@@ -1,6 +1,6 @@
 {
     "name": "htmlmin/htmlmin",
-    "description": "HTMLMin Is A Simple HTML Minifier For Laravel 6+",
+    "description": "HTMLMin Is A Simple HTML Minifier For Laravel 7+",
     "keywords": ["laravel", "framework", "html minifier", "html", "minifier", "HTMLMin", "Laravel HTMLMin", "Laravel-HTMLMin"],
     "license": "MIT",
     "authors": [
@@ -14,13 +14,13 @@
         }
     ],
     "require": {
-        "php": ">=7.2.0",
-        "illuminate/contracts": "^5.7|^5.8|^6.0|^7.0|^8.0|^9.0|^10.0|^11.0",
-        "illuminate/filesystem": "^5.7|^5.8|^6.0|^7.0|^8.0|^9.0|^10.0|^11.0",
-        "illuminate/http": "^5.7|^5.8|^6.0|^7.0|^8.0|^9.0|^10.0|^11.0",
-        "illuminate/routing": "^5.7|^5.8|^6.0|^7.0|^8.0|^9.0|^10.0|^11.0",
-        "illuminate/support": "^5.7|^5.8|^6.0|^7.0|^8.0|^9.0|^10.0|^11.0",
-        "illuminate/view": "^5.7|^5.8|^6.0|^7.0|^8.0|^9.0|^10.0|^11.0",
+        "php": ">=7.2.5",
+        "illuminate/contracts": "^7.0|^8.0|^9.0|^10.0|^11.0",
+        "illuminate/filesystem": "^7.0|^8.0|^9.0|^10.0|^11.0",
+        "illuminate/http": "^7.0|^8.0|^9.0|^10.0|^11.0",
+        "illuminate/routing": "^7.0|^8.0|^9.0|^10.0|^11.0",
+        "illuminate/support": "^7.0|^8.0|^9.0|^10.0|^11.0",
+        "illuminate/view": "^7.0|^8.0|^9.0|^10.0|^11.0",
         "mrclay/minify": "^2.2|^3.0"
     },
     "require-dev": {
@@ -43,7 +43,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "6.0-dev"
+            "dev-master": "7.0-dev"
         },
         "laravel": {
           "providers": [

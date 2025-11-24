@@ -12,7 +12,7 @@ Laravel HTMLMin is currently maintained by [Raza Mehdi](https://github.com/srmkl
 
 ## Installation
 
-Laravel HTMLMin requires [PHP](https://php.net) 7.2+. This particular version supports Laravel 5.7, 5.8, 6.x, 7.x, 8.x, 9.x, 10.x and 11.x.
+Laravel HTMLMin requires [PHP](https://php.net) 7.2.5+. This particular version supports Laravel 7.x, 8.x, 9.x, 10.x and 11.x.
 
 To get the latest version, simply require the project using [Composer](https://getcomposer.org):
 
@@ -20,7 +20,7 @@ To get the latest version, simply require the project using [Composer](https://g
 $ composer require htmlmin/htmlmin
 ```
 
-Once installed, if you're using **Laravel 5.5+**, the package will auto-register via package discovery. For older versions, you need to register the service provider manually in your `config/app.php`:
+Once installed, the package will auto-register via package discovery. If you need to register manually (for older Laravel versions or custom setups), you can add the service provider in your `config/app.php`:
 
 ```php
 'providers' => [
@@ -36,15 +36,15 @@ If you want, a facade is available to alias
 ]
 ```
 
-### Migrating from Laravel 4.2
+### Migrating from Older Versions
 
-If you're migrating from Laravel 4.2, follow these steps:
+If you're migrating from an older version of this package or Laravel, follow these steps:
 
-1. Update your `composer.json` to require Laravel 5.0+
+1. Update your `composer.json` to require Laravel 7.0+
 2. Update this package to the latest version: `composer require htmlmin/htmlmin`
-3. Move your config file from `app/config/packages/htmlmin/htmlmin/config.php` to `config/htmlmin.php`
-4. If you were using filters, replace them with the new middleware `HTMLMin\HTMLMin\Http\Middleware\MinifyMiddleware`
-5. Update your service provider registration to use the new namespace format shown above
+3. Ensure your config file is at `config/htmlmin.php` (publish it if needed: `php artisan vendor:publish`)
+4. If you were using filters (Laravel 4.2), replace them with the new middleware `HTMLMin\HTMLMin\Http\Middleware\MinifyMiddleware`
+5. Update your service provider registration to use the new namespace format shown above (if not using auto-discovery)
 6. Clear your compiled views: `php artisan view:clear`
 
 ## Configuration
