@@ -31,7 +31,7 @@ class MiddlewareTest extends AbstractFunctionalTestCase
      *
      * @return void
      */
-    protected function getEnvironmentSetUp($app)
+    protected function getEnvironmentSetUp($app): void
     {
         parent::getEnvironmentSetUp($app);
 

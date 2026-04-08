@@ -10,21 +10,15 @@ class ComponentsTest extends AbstractFunctionalTestCase
     /**
      * Get the required service providers.
      *
-     * @param \Illuminate\Contracts\Foundation\Application $app
-     *
      * @return string[]
      */
-    protected function getRequiredServiceProviders($app)
+    protected static function getRequiredServiceProviders(): array
     {
         return [TestComponentsProvider::class];
     }
 
     public function testUseComponents()
     {
-        if (version_compare($this->app->version(), '7.0', '<')) {
-            $this->markTestSkipped('Class components were released in Laravel version 7.0.0');
-        }
-
         /** @var MinifyCompiler $minifyCompiler */
         $minifyCompiler = $this->app->make('view')
             ->getEngineResolver()
