@@ -24,6 +24,6 @@ class MinifyCompilerMock extends BladeCompiler
      */
     public function getCompilerCustomDirectives(BladeCompiler $compiler)
     {
-        return $compiler->customDirectives;
+        return $compiler->getCustomDirectives();
     }
 }

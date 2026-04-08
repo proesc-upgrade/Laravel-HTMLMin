@@ -28,30 +28,24 @@ class HTMLMinTest extends AbstractTestCase
 
     /**
      * Get the facade accessor.
-     *
-     * @return string
      */
-    protected function getFacadeAccessor()
+    protected static function getFacadeAccessor(): string
     {
         return 'htmlmin';
     }
 
     /**
      * Get the facade class.
-     *
-     * @return string
      */
-    protected function getFacadeClass()
+    protected static function getFacadeClass(): string
     {
         return Facade::class;
     }
 
     /**
      * Get the facade root.
-     *
-     * @return string
      */
-    protected function getFacadeRoot()
+    protected static function getFacadeRoot(): string
     {
         return HTMLMin::class;
     }
